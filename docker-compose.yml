@@ -5,3 +5,7 @@ services:
     build: .
     ports:
       - 4567:4567
+    environment:
+      RUBY_ENV: ${RUBY_ENV:-develop}
+    volumes:
+      - ./:/app/.
